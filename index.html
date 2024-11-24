@@ -54,6 +54,7 @@
 <body>
 
     <h1>开机自动登录校园网指南</h1>
+    <p><a href="https://campus-net-github-io.pages.dev/" class="link">国内说明链接</a>------<a href="https://pb-ctrl.github.io/Campus-net.github.io/" class="link">        国外说明链接</a></p>
 
     <p><span class="note">注意事项:</span></p>
     <ul>
@@ -67,7 +68,7 @@
     <p>1. 首先，打开记事本并输入以下内容:</p>
 
     <div class="code-container">
-        <button class="copy-btn" onclick="copyCode('code-block-1')">复制</button>
+        <button class="copy-btn" onclick="copyCode('code-block-1')">复制代码</button>
         <pre id="code-block-1">start http://10.31.0.10/</pre>
     </div>
 
@@ -79,21 +80,29 @@
     <p>1. 按住键盘上的<code>Win</code> + <code>R</code>组合键，输入以下命令并按下回车：</p>
 
     <div class="code-container">
-        <button class="copy-btn" onclick="copyCode('code-block-2')">复制</button>
+        <button class="copy-btn" onclick="copyCode('code-block-2')">复制代码</button>
         <pre id="code-block-2">shell:startup</pre>
     </div>
 
     <p>2. 打开文件夹后，将刚才创建的<code>.bat</code>文件（如<code>net.bat</code>）剪切到这个文件夹中。这样，每次启动电脑时，系统会自动运行这个脚本，帮助您自动登录校园网。</p>
     <img src="https://s2.loli.net/2024/04/07/swlD8BoWM6GtaYf.png" alt="步骤图2">
 
-
     <p>对于iOS用户（非macOS），可以点击<a href="https://www.icloud.com/shortcuts/fafebf2fe5a44e7db2dd51394b2c6078" class="link">此链接</a>使用快捷指令。</p>
+
+    <h2>搭配脚本，更美味！</h2>
+    <p><span class="note">以下脚本均来自互联网，有问题请自行解决：</span></p>
+    <ul>
+        <li><a href="https://update.greasyfork.org/scripts/498145/Youtube%20HD%20Premium.user.js" class="link">Youtube HD Premium</a></li>
+        <li><a href="https://update.greasyfork.org/scripts/459541/YouTube%E5%8E%BB%E5%B9%BF%E5%91%8A.user.js" class="link">YouTube去广告</a></li>
+        <li><a href="https://update.greasyfork.org/scripts/460680/Youtube%20Tools%20All%20in%20one%20local%20download%20mp3%20mp4%20HIGT%20QUALITY%20return%20dislikes%20and%20more.user.js" class="link">Youtube 工具 多合一本地下載 MP4、MP3</a></li>
+        <li><a href="https://update.greasyfork.org/scripts/518657/PC%20web%20page%20B%20station%20cancels%20continuous%20broadcast.user.js" class="link">pc网页b站取消连播</a></li>
+        <li><a href="https://update.greasyfork.org/scripts/518562/%E8%87%AA%E5%8A%A8%E5%85%A8%E5%B1%8F.user.js" class="link">自动全屏</a></li>
+    </ul>
 
     <script>
         function copyCode(id) {
             const code = document.getElementById(id).innerText;
             
-            // 检查浏览器是否支持Clipboard API
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(code).then(() => {
                     alert("代码已复制到剪贴板！");
@@ -101,7 +110,6 @@
                     alert("复制失败，请手动复制: " + err);
                 });
             } else {
-                // 不支持Clipboard API时，使用旧的方式进行手动复制
                 const textarea = document.createElement("textarea");
                 textarea.value = code;
                 document.body.appendChild(textarea);
